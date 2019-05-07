@@ -1,0 +1,11 @@
+*.pyc
+log
+env
+migrations
+conf
+conf.template
+.idea
+*.swp
+*.db
+*.log
+.DS_Store
