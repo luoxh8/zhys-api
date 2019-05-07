@@ -97,7 +97,7 @@ def _test_get_content_multi():
 
 
 def test_user_info():
-    resp = get('/user/user_info', params={'login_key': 222}, headers={"Authorization": 'KDYSToken eyJhbGciOiJIUzI1NiIsImV4cCI6MTUxMDgyMzE1NSwiaWF0IjoxNTEwODIzMTM1fQ.eyJvcGVuaWQiOiJvby1QeTBOcTlKZkZTTEM4NlgzeFRyRWU5dVRJIiwic2Vzc2lvbl9rZXkiOiJld1lrTWlDMkx0VjRRN05LS21yZGhRPT0iLCJ1c2VyX2lkIjoxLCJ1bmlvbklkIjoib2x6RVpzN3hWRENITHFXcUhNYTlmQlQ4RTk1NCJ9.kYuwovk9Xb6mWNEYmNS4YXUsPf3ru4IVjxKY1JdS0S8'})
+    resp = get('/user/user_info', params={'login_key': 222}, headers={"Authorization": 'ZHYSToken eyJhbGciOiJIUzI1NiIsImV4cCI6MTUxMDgyMzE1NSwiaWF0IjoxNTEwODIzMTM1fQ.eyJvcGVuaWQiOiJvby1QeTBOcTlKZkZTTEM4NlgzeFRyRWU5dVRJIiwic2Vzc2lvbl9rZXkiOiJld1lrTWlDMkx0VjRRN05LS21yZGhRPT0iLCJ1c2VyX2lkIjoxLCJ1bmlvbklkIjoib2x6RVpzN3hWRENITHFXcUhNYTlmQlQ4RTk1NCJ9.kYuwovk9Xb6mWNEYmNS4YXUsPf3ru4IVjxKY1JdS0S8'})
     # resp = get('/user/user_info', params={'login_key': 222})
     # resp = get('/user/user_info', params={'login_key': 223})
 

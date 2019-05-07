@@ -27,9 +27,9 @@ class BaseConfig:
 
     # ios m_id 对应bundle_id
     IOS_BUNDLE_ID = {
-        -1: ['com.xiaoxia.kdysread', 'com.kdys.reader', 'com.xia.reader'],  # 默认
-        1: ['com.xiazhuan.kdysread'],
-        2: ['com.xiaer.kdysread'],
+        -1: ['com.zhihui.zhysread', 'com.zhys.reader', 'com.xia.reader'],  # 默认
+        1: ['com.xiazhuan.zhysread'],
+        2: ['com.xiaer.zhysread'],
         3: ['com.xia.reader'],
     }
     # ios内购购买项配置
@@ -61,7 +61,7 @@ class BaseConfig:
         access_key='mD9rPwwMevxOL3uC38eOAfno4TZxTjKXEBub4vAk',
         secret_key='v1M5HVJpN8s2PtGEorH8Wj6NyiEKgnei9VCQpMZ_',
         buckets={
-            'kdys': 'ov2eyt2uw.bkt.clouddn.com'
+            'zhys': 'ov2eyt2uw.bkt.clouddn.com'
         }
     )
 
@@ -96,7 +96,7 @@ class BaseConfig:
 
 
 class DebugConfig(BaseConfig):
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:root@127.0.0.1/kdys'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:root@127.0.0.1/zhys'
     BASE_URL = 'http://dev.api.kdyoushu.com:7000'
     DEBUG = True
     PORT = 5000
@@ -123,7 +123,7 @@ class DebugConfig(BaseConfig):
 
 
 class ReleaseConfig(BaseConfig):
-    SQLALCHEMY_DATABASE_URI = 'mysql://job:aC9TWr2BbgD6dMA9PoA8@127.0.0.1/kdys'
+    SQLALCHEMY_DATABASE_URI = 'mysql://job:aC9TWr2BbgD6dMA9PoA8@127.0.0.1/zhys'
     BASE_URL = 'http://api.kdyoushu.com:7000'
     PORT = 6791
 
@@ -131,12 +131,12 @@ class ReleaseConfig(BaseConfig):
         'SMTP': {  # 邮箱日志发送， 如果没有配置， 则不开启
             'HOST': 'smtp.exmail.qq.com',  # smtp 服务器地址
             'TOADDRS': ['linjf@pv.cc', 'mat@pv.cc', 'wangzq@pv.cc', 'liuzy@pv.cc'],  # smtp 收件人
-            'SUBJECT': u'[kdys] error from api',  # smtp 主题
+            'SUBJECT': u'[zhys] error from api',  # smtp 主题
             'USER': 'xxdebug@pv.cc',  # smtp账号
             'PASSWORD': 'jNy2dD5QWmxe19Xg',  # smtp账号密码
         },
         'FILE': {  # 文件日志， 如果没有对应的配置，则不开启
-            # 'PATH': '/data/log/kdys/zhys-api.log',
+            # 'PATH': '/data/log/zhys/zhys-api.log',
             'PATH': './log/zhys-api.log',
             'MAX_BYTES': 1024 * 1024 * 10,  # 单个文件大小默认10M
             'BACKUP_COUNT': 5,  # 文件滚动数量，默认5
@@ -164,14 +164,14 @@ class ReleaseConfig(BaseConfig):
 
 
 class DebugAdminConfig(BaseConfig):
-    SQLALCHEMY_DATABASE_URI = 'mysql://job:3b0qltxTrIUiIYKokXKc@127.0.0.1/kdys'
+    SQLALCHEMY_DATABASE_URI = 'mysql://job:3b0qltxTrIUiIYKokXKc@127.0.0.1/zhys'
     LOGIN_URL = 'http://dev.admin.kdyoushu.com:7000/login.html'
     DEBUG = True
     PORT = 6790
 
 
 class ReleaseAdminConfig(BaseConfig):
-    SQLALCHEMY_DATABASE_URI = 'mysql://job:aC9TWr2BbgD6dMA9PoA8@127.0.0.1/kdys'
+    SQLALCHEMY_DATABASE_URI = 'mysql://job:aC9TWr2BbgD6dMA9PoA8@127.0.0.1/zhys'
     LOGIN_URL = 'http://yd.xiaoxianetwork.com/login.html'
     PORT = 6792
 
@@ -179,12 +179,12 @@ class ReleaseAdminConfig(BaseConfig):
         'SMTP': {  # 邮箱日志发送， 如果没有配置， 则不开启
             'HOST': 'smtp.exmail.qq.com',  # smtp 服务器地址
             'TOADDRS': ['linjf@pv.cc', 'mat@pv.cc', 'wangzq@pv.cc', 'liuzy@pv.cc'],  # smtp 收件人
-            'SUBJECT': u'[kdys] error from admin',  # smtp 主题
+            'SUBJECT': u'[zhys] error from admin',  # smtp 主题
             'USER': 'xxdebug@pv.cc',  # smtp账号
             'PASSWORD': 'jNy2dD5QWmxe19Xg',  # smtp账号密码
         },
         'FILE': {  # 文件日志， 如果没有对应的配置，则不开启
-            'PATH': './log/kdys-admin.log',
+            'PATH': './log/zhys-admin.log',
             'MAX_BYTES': 1024 * 1024 * 10,  # 单个文件大小默认10M
             'BACKUP_COUNT': 5,  # 文件滚动数量，默认5
         }
@@ -192,8 +192,8 @@ class ReleaseAdminConfig(BaseConfig):
 
 
 class DebugAppletConfig(BaseConfig):
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:root@127.0.0.1/kdys'
-    BASE_URL = 'https://devkdysapi2.xiaoxianetwork.com'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:root@127.0.0.1/zhys'
+    BASE_URL = 'https://devzhysapi2.xiaoxianetwork.com'
     DEBUG = True
     PORT = 6793
 
@@ -213,7 +213,7 @@ class DebugAppletConfig(BaseConfig):
 
 
 class AppletConfig(BaseConfig):
-    SQLALCHEMY_DATABASE_URI = 'mysql://job:aC9TWr2BbgD6dMA9PoA8@127.0.0.1/kdys'
+    SQLALCHEMY_DATABASE_URI = 'mysql://job:aC9TWr2BbgD6dMA9PoA8@127.0.0.1/zhys'
     BASE_URL = 'https://api2.kdyoushu.com'
     PORT = 6794
 
@@ -221,12 +221,12 @@ class AppletConfig(BaseConfig):
         'SMTP': {  # 邮箱日志发送， 如果没有配置， 则不开启
             'HOST': 'smtp.exmail.qq.com',  # smtp 服务器地址
             'TOADDRS': ['linjf@pv.cc', 'mat@pv.cc', 'wangzq@pv.cc', 'liuzy@pv.cc'],  # smtp 收件人
-            'SUBJECT': u'[kdys] error from api',  # smtp 主题
+            'SUBJECT': u'[zhys] error from api',  # smtp 主题
             'USER': 'xxdebug@pv.cc',  # smtp账号
             'PASSWORD': 'jNy2dD5QWmxe19Xg',  # smtp账号密码
         },
         'FILE': {  # 文件日志， 如果没有对应的配置，则不开启
-            'PATH': './log/kdys-applet.log',
+            'PATH': './log/zhys-applet.log',
             'MAX_BYTES': 1024 * 1024 * 10,  # 单个文件大小默认10M
             'BACKUP_COUNT': 5,  # 文件滚动数量，默认5
         }

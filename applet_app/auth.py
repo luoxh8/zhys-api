@@ -5,7 +5,7 @@ from itsdangerous import (TimedJSONWebSignatureSerializer as Serializer,
                           BadSignature, SignatureExpired)
 import ujson as json
 
-token_auth = HTTPTokenAuth(scheme='KDYSToken')
+token_auth = HTTPTokenAuth(scheme='ZHYSToken')
 
 
 def generate_auth_token(data, expiration=7200):

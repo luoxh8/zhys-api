@@ -28,13 +28,13 @@ COMICS_PATH = '/data/comic_datas/json_data_maimeng'
 # COMICS_PATH = '/Users/linjianfeng/工作/广州飞屋/口袋有书/文件/漫画书籍/麦萌/格式化整理'
 
 
-def upload_img(filename, data, bucket_name='kdys'):
+def upload_img(filename, data, bucket_name='zhys'):
     """上传图片至七牛云空间（数据流形式）"""
     cfg = dict(
         access_key = 'mD9rPwwMevxOL3uC38eOAfno4TZxTjKXEBub4vAk',
         secret_key = 'v1M5HVJpN8s2PtGEorH8Wj6NyiEKgnei9VCQpMZ_',
         buckets = {
-            'kdys': 'ssl.kdyoushu.com'
+            'zhys': 'ssl.kdyoushu.com'
         }
     )
     access_key = cfg['access_key']
@@ -85,7 +85,7 @@ class ComicImport():
     DB_SESSION = None
 
     def __init__(self):
-        engine = create_engine('mysql://job:aC9TWr2BbgD6dMA9PoA8@localhost/kdys?charset=utf8', echo=True)
+        engine = create_engine('mysql://job:aC9TWr2BbgD6dMA9PoA8@localhost/zhys?charset=utf8', echo=True)
         DBSession = sessionmaker(bind=engine)
         self.DB_SESSION = DBSession()
 

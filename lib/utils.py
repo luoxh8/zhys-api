@@ -20,7 +20,7 @@ def get_define(group, name, config=None):
     defines = config['DEFINES']
     return defines[group][name]
 
-def upload_img(filename, data, bucket_name='kdys', config=None):
+def upload_img(filename, data, bucket_name='zhys', config=None):
     if not config:
         config = current_app.config
     cfg = config['QINIU_SETTINGS']

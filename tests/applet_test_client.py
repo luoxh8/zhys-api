@@ -63,7 +63,7 @@ def gen_token():
 
 # =====测试用例========
 def test_user_info():
-    resp = get('/user/user_info', headers={"Authorization": 'KDYSToken ' + gen_token()})
+    resp = get('/user/user_info', headers={"Authorization": 'zhysToken ' + gen_token()})
     assert 'id' in resp.json().get('data', {})
 
 

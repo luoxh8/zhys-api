@@ -43,7 +43,7 @@ def test_app(app):
 
 # =====测试用例========
 def test_user_info(test_app):
-    resp = test_app.get(url_for('user.user_info'),  headers={"Authorization": 'KDYSToken ' + gen_token()})
+    resp = test_app.get(url_for('user.user_info'),  headers={"Authorization": 'zhysToken ' + gen_token()})
     assert 'id' in resp.json_body.get('data', {})
 
 

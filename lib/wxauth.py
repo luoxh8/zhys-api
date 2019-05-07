@@ -42,7 +42,7 @@ def get_wxcode():
         token_data = requests.get(url).json()
         redis_utils.set_cache(key, json.dumps(token_data), 7000)
     data = {
-        #'path':'https://devkdysapi2.xiaoxianetwork.com/book/get_content?book_id=5373849&volume_id=2251&chapter_id=2199&platform=applet',
+        #'path':'https://devzhysapi2.xiaoxianetwork.com/book/get_content?book_id=5373849&volume_id=2251&chapter_id=2199&platform=applet',
         #'path': u'pages/reader/reader?book_id=5387770&index=2&s=yjfs',
         #'path': u'pages/text/text?book_id=5387770&index=2&s=yjfs',
         #'path': u'activity/mind/mind?s=l6k4',
