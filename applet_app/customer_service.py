@@ -68,7 +68,7 @@ def send_download_custom_msg(openid):
         "msgtype": "link",
         "link": {
             "title": "点此进入",
-            "description": "安装口袋有书客户端，海量免费书任看",
+            "description": "安装智慧有书客户端，海量免费书任看",
             "url": "http://app.kdyoushu.com/?channel_id=enua",
             "thumb_url": "http://ov2eyt2uw.bkt.clouddn.com/app_icon.png"
         }

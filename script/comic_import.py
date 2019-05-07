@@ -25,7 +25,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 COMICS_PATH = '/data/comic_datas/json_data_maimeng'
-# COMICS_PATH = '/Users/linjianfeng/工作/广州飞屋/口袋有书/文件/漫画书籍/麦萌/格式化整理'
+# COMICS_PATH = '/Users/linjianfeng/工作/广州飞屋/智慧有书/文件/漫画书籍/麦萌/格式化整理'
 
 
 def upload_img(filename, data, bucket_name='zhys'):

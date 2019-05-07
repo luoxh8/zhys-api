@@ -46,7 +46,7 @@ def send_sms_xiangxun(tel, msg):
         'account': 's11030012',
         'password': get_md5_str('abc123').upper(),
         'mobile': tel,
-        'content': msg + u'【口袋有书】',
+        'content': msg + u'【智慧有书】',
         'requestId': str(time.time()),
         'extno': '',
     }

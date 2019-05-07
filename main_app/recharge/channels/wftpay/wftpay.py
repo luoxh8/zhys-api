@@ -35,7 +35,7 @@ class WftPay(BasePay):
             'notify_url': notify_url,
             'device_info': 'AND_WAP' if kwargs.get('device_type') == 1 else 'iOS_WAP',
             'mch_app_id': 'http://www.kdyoushu.com',
-            'mch_app_name': u'口袋有书',
+            'mch_app_name': u'智慧有书',
             'nonce_str': get_nonce_str(),
         }
         post_data['sign'] = get_sign(post_data, SECRET_KEY)
